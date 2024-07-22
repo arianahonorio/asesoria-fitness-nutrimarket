@@ -12,11 +12,24 @@ inputNombre.addEventListener('input', () => {
 })
 
 //edad
-let inputEdad= document.getElementById("edad")
-inputEdad.addEventListener('input', () => { 
-    inputEdad.value;
+
+function retornarProfe () {
+    inputEdad= document.getElementById("edad")
+    inputEdad.addEventListener ('input', () => { 
+        let edad= inputEdad;
+        if (edad <= 20) { ('Tu entrenador es Pedro.'); 
+        }
+        else if(edad <= 30) { ('Tu entrenadora es Viviana.');
+        }
+        else if (edad <= 35) { ('Tu entrenador es Ayelen.')
+        }
+        inputEdad.value;
+        }  
+    )
     localStorage.setItem("inputEdad", JSON.stringify(inputEdad))
-})
+}
+retornarProfe()
+
 
 //altura
 let inputAltura= document.getElementById("altura")
@@ -47,13 +60,6 @@ const alimentacion= [
         nutricionista: 'Lucia',
     },
 ]
-
-let inputAlimentacion= document.getElementById("alimentacion")
-inputAlimentacion.onchange = () => {
-    const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.tipo === 
-    inputAlimentacion.value,
-    localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
-)}
 
 //dieta
 //Plan Nutricionista de dieta Vegan-Federico
@@ -95,7 +101,8 @@ const dietaVegan= [{
 },
 ]
 
-dietaVegan()
+let buttonVegan= document.getElementById("vegan")
+
 
 //Plan Nutricionista de dieta Veggie-Andrea
 const dietaVeggie= [{
@@ -141,10 +148,11 @@ const dietaVeggie= [{
     postre: 'fruta de estación',
 },
 ]
-dietaVeggie()
+
 
 //Plan Nutricionista de dieta Completa-Lucia
-const dietaCompleta= [{
+const dietaCompleta= [
+{
     comida: 'desayuno',
     receta: 'cafe, tostadas con huevo revuelto, palta y tomate, porción de fruta',
 },
@@ -187,9 +195,15 @@ const dietaCompleta= [{
     postre:'fruta de estación',
 },
 ]
-dietaCompleta()
 
-//Plan de entrenamineto-Pedro/Viviana
+let inputAlimentacion= document.getElementById("alimentacion")
+inputAlimentacion.onchange = () => {
+    const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.tipo === 
+    inputAlimentacion.value,
+    localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
+)}
+
+//Plan de entrenamineto-Pedro/Viviana/Ayelen
 //Rutina de enfasis a un grupo muscular
 const rutinaEnfasis=[
 {
@@ -287,6 +301,167 @@ const rutinaEnfasis=[
     ejercicio:'elevacion de piernas',
     series: '4',
     repeticiones: '20',
+},
+]
+
+//Rutina Clasica
+const rutinaClasica= [
+{
+    dia:'lunes-miercoles',
+    ejercicio:'sentadillas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'remo con barra con barra/mancuernas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'press militar con barra/mancuernas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'press de banca',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'curl de biceps',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'fondos paralelas',
+    series: '5',
+    repeticiones: '10',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'elevaciones de talones con barra',
+    series: '3',
+    repeticiones: '20',
+},{
+    dia:'lunes-miercoles',
+    ejercicio:'abdominales oblicuos y cortos',
+    series: '8',
+    repeticiones: '20',
+},{
+    dia:'viernes',
+    ejercicio:'sentadillas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'viernes',
+    ejercicio:'peso muerto',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'viernes',
+    ejercicio:'press militar con barra/mancuernas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'viernes',
+    ejercicio:'press de banca con barra/mancuernas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'viernes',
+    ejercicio:'curl de biceps con barra/mancuernas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'viernes',
+    ejercicio:'fondos paralelas',
+    series: '5',
+    repeticiones: '10',
+},{
+    dia:'viernes',
+    ejercicio:'elevaciones de talones con barra',
+    series: '3',
+    repeticiones: '20',
+},{
+    dia:'viernes',
+    ejercicio:'abdominales oblicuos y cortos',
+    series: '8',
+    repeticiones: '20',
+},
+]
+
+//Rutina avanzada
+//Todos los días_Cuerpo completo
+const rutinaAvanzada=[
+{
+    dia:'todos-los-dias',
+    ejercicio:'remo al menton',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'press de banca',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'premo mancuerna a una mano',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'elevaciones laterales',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'press inclinado',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'extenciones de tríceps polea alta',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'curl con barra',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'curl con mancuerna sentado',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'sentadillas',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'pullover',
+    series: '3',
+    repeticiones: '12',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'sentadilla profunda',
+    series: '1',
+    repeticiones: '20',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'pullovers profundo',
+    series: '1',
+    repeticiones: '20',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'peso muerto',
+    series: '2',
+    repeticiones: '18',
+},{
+    dia:'todos-los-dias',
+    ejercicio:'extensiones de tríceps en polea alta',
+    series: '2',
+    repeticiones: '18',
 },
 ]
 
