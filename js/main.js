@@ -60,8 +60,15 @@ const alimentacion= [
         nutricionista: 'Lucia',
     },
 ]
+//asignar nutricionista
+let inputAlimentacion= document.getElementById("alimentacion")
+inputAlimentacion.onchange = () => {
+    const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.nutricionista === 
+    inputAlimentacion.value,
+    localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
+)}
 
-//dieta
+//dietas
 //Plan Nutricionista de dieta Vegan-Federico
 const dietaVegan= [{
     comida: 'desayuno',
@@ -102,7 +109,10 @@ const dietaVegan= [{
 ]
 
 let buttonVegan= document.getElementById("vegan")
-
+buttonVegan.click = () => {
+    const mostrarDietaVegan = dietaVegan.forEach (dietaVegan => {'Tu comida para ${dietaVegan.comida} es ${dietaVegan.receta}.'},   
+        localStorage.setItem("buttonVegan", JSON.stringify(buttonVegan)),
+)}
 
 //Plan Nutricionista de dieta Veggie-Andrea
 const dietaVeggie= [{
@@ -148,7 +158,11 @@ const dietaVeggie= [{
     postre: 'fruta de estación',
 },
 ]
-
+let buttonVeggie= document.getElementById("veggie")
+buttonVeggie.click = () => {
+    const mostrarDietaVeggie = dietaVeggie.forEach (mostrarDietaVeggie => {'Tu comida para ${dietaVeggie.comida} es ${dietaVeggie.receta}.'},   
+        localStorage.setItem("buttonVeggie", JSON.stringify(buttonVeggie)),
+)}
 
 //Plan Nutricionista de dieta Completa-Lucia
 const dietaCompleta= [
@@ -196,11 +210,10 @@ const dietaCompleta= [
 },
 ]
 
-let inputAlimentacion= document.getElementById("alimentacion")
-inputAlimentacion.onchange = () => {
-    const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.tipo === 
-    inputAlimentacion.value,
-    localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
+let buttonCompleta= document.getElementById("completa")
+buttonCompleta.click = () => {
+    const mostrarDietaCompleta = dietaCompleta.forEach (dietaCompleta => {('Tu comida para ${dietaCompleta.comida} es ${dietaCompleta.receta}.')},   
+        localStorage.setItem("buttonCompleta", JSON.stringify(buttonCompleta)),
 )}
 
 //Plan de entrenamineto-Pedro/Viviana/Ayelen
@@ -304,6 +317,12 @@ const rutinaEnfasis=[
 },
 ]
 
+let buttonEnfasis= document.getElementById("enfasis")
+buttonEnfasis.click = () => {
+    const mostrarRutinaEnfasis = rutinaEnfasis.forEach (rutinaEnfasis => {('El día ${rutinaEnfasis.dia} realiza ${rutinaEnfasis.ejercicio} de ${rutinaEnfasis.series} y ${rutinaEnfasis.repetiones}.')},   
+        localStorage.setItem("buttonEnfasis", JSON.stringify(buttonEnfasis)),
+)}
+
 //Rutina Clasica
 const rutinaClasica= [
 {
@@ -389,6 +408,12 @@ const rutinaClasica= [
 },
 ]
 
+let buttonClasica= document.getElementById("clasica")
+buttonClasica.click = () => {
+    const mostrarRutinaClasica = rutinaClasica.forEach (rutinaClasica => {('El día ${rutinaClasica.dia} realiza ${rutinaClasica.ejercicio} de ${rutinaClasica.series} series y ${rutinaClasica.repetiones} repeticiones.')},   
+        localStorage.setItem("buttonClasica", JSON.stringify(buttonClasica)),
+)}
+
 //Rutina avanzada
 //Todos los días_Cuerpo completo
 const rutinaAvanzada=[
@@ -464,4 +489,33 @@ const rutinaAvanzada=[
     repeticiones: '18',
 },
 ]
+
+let buttonAvanzada= document.getElementById("avanzada")
+buttonAvanzada.click = () => {
+    const mostrarRutinaAvanzada = rutinaAvanzada.forEach (rutinaAvanzada => {('El día ${rutinaCAvanzada.dia} realiza ${rutinaAvanzada.ejercicio} de ${rutinaAvanzada.series} series y ${rutinaAvanzada.repetiones} repeticiones.')},   
+        localStorage.setItem("buttonAvanzada", JSON.stringify(buttonAvanzada)),
+)}
+
+//email
+let inputEmail= document.getElementById("email")
+inputEmail.addEventListener('input', () => { 
+    inputEmail.value;
+    localStorage.setItem("inputEmail", JSON.stringify(inputEmail))
+})
+
+//button-enviar
+let buttonGuardar = document.getElementById("guardar")
+buttonGuardar.click = () => {click++}
+localStorage.getItem(buttonGuardar)
+
+//formulario
+let miformulario = document.getElementById("formulario");
+miformulario.addEventListener("Submit", validarFormulario);
+    function validarFormulario (e) {
+        e.preventDefault();
+        localStorage.getItem("formulario")
+    }
+
+
+
 
