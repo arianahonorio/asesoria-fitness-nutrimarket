@@ -110,7 +110,7 @@ const dietaVegan= [{
 
 let buttonVegan= document.getElementById("vegan")
 buttonVegan.click = () => {
-    const mostrarDietaVegan = dietaVegan.forEach (dietaVegan => {'Tu comida para ${dietaVegan.comida} es ${dietaVegan.receta}.'},   
+    const mostrarDietaVegan = dietaVegan.forEach (dietaVegan => {(`Tu comida para ${dietaVegan.comida} es ${dietaVegan.receta}.`)},   
         localStorage.setItem("buttonVegan", JSON.stringify(buttonVegan)),
 )}
 
@@ -160,7 +160,7 @@ const dietaVeggie= [{
 ]
 let buttonVeggie= document.getElementById("veggie")
 buttonVeggie.click = () => {
-    const mostrarDietaVeggie = dietaVeggie.forEach (mostrarDietaVeggie => {'Tu comida para ${dietaVeggie.comida} es ${dietaVeggie.receta}.'},   
+    const mostrarDietaVeggie = dietaVeggie.forEach (mostrarDietaVeggie => {(`Tu comida para ${dietaVeggie.comida} es ${dietaVeggie.receta}.`)},   
         localStorage.setItem("buttonVeggie", JSON.stringify(buttonVeggie)),
 )}
 
@@ -212,7 +212,7 @@ const dietaCompleta= [
 
 let buttonCompleta= document.getElementById("completa")
 buttonCompleta.click = () => {
-    const mostrarDietaCompleta = dietaCompleta.forEach (dietaCompleta => {('Tu comida para ${dietaCompleta.comida} es ${dietaCompleta.receta}.')},   
+    const mostrarDietaCompleta = dietaCompleta.forEach (dietaCompleta => {(`Tu comida para ${dietaCompleta.comida} es ${dietaCompleta.receta}.`)},   
         localStorage.setItem("buttonCompleta", JSON.stringify(buttonCompleta)),
 )}
 
@@ -319,7 +319,7 @@ const rutinaEnfasis=[
 
 let buttonEnfasis= document.getElementById("enfasis")
 buttonEnfasis.click = () => {
-    const mostrarRutinaEnfasis = rutinaEnfasis.forEach (rutinaEnfasis => {('El día ${rutinaEnfasis.dia} realiza ${rutinaEnfasis.ejercicio} de ${rutinaEnfasis.series} y ${rutinaEnfasis.repetiones}.')},   
+    const mostrarRutinaEnfasis = rutinaEnfasis.forEach (rutinaEnfasis => {(`El día ${rutinaEnfasis.dia} realiza ${rutinaEnfasis.ejercicio} de ${rutinaEnfasis.series} y ${rutinaEnfasis.repetiones}.`)},   
         localStorage.setItem("buttonEnfasis", JSON.stringify(buttonEnfasis)),
 )}
 
@@ -410,7 +410,7 @@ const rutinaClasica= [
 
 let buttonClasica= document.getElementById("clasica")
 buttonClasica.click = () => {
-    const mostrarRutinaClasica = rutinaClasica.forEach (rutinaClasica => {('El día ${rutinaClasica.dia} realiza ${rutinaClasica.ejercicio} de ${rutinaClasica.series} series y ${rutinaClasica.repetiones} repeticiones.')},   
+    const mostrarRutinaClasica = rutinaClasica.forEach (rutinaClasica => {(`El día ${rutinaClasica.dia} realiza ${rutinaClasica.ejercicio} de ${rutinaClasica.series} series y ${rutinaClasica.repetiones} repeticiones.`)},   
         localStorage.setItem("buttonClasica", JSON.stringify(buttonClasica)),
 )}
 
@@ -492,7 +492,7 @@ const rutinaAvanzada=[
 
 let buttonAvanzada= document.getElementById("avanzada")
 buttonAvanzada.click = () => {
-    const mostrarRutinaAvanzada = rutinaAvanzada.forEach (rutinaAvanzada => {('El día ${rutinaCAvanzada.dia} realiza ${rutinaAvanzada.ejercicio} de ${rutinaAvanzada.series} series y ${rutinaAvanzada.repetiones} repeticiones.')},   
+    const mostrarRutinaAvanzada = rutinaAvanzada.forEach (rutinaAvanzada => {(`El día ${rutinaAvanzada.dia} realiza ${rutinaAvanzada.ejercicio} de ${rutinaAvanzada.series} series y ${rutinaAvanzada.repetiones} repeticiones.`)},   
         localStorage.setItem("buttonAvanzada", JSON.stringify(buttonAvanzada)),
 )}
 
