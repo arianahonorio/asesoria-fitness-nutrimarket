@@ -12,9 +12,11 @@ inputNombre.addEventListener('input', () => {
 })
 
 //edad
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 
+let inputEdad= document.getElementById("edad")
 function retornarProfe () {
-    inputEdad= document.getElementById("edad")
     inputEdad.addEventListener ('input', () => { 
         let edad= inputEdad;
         if (edad <= 20) { ('Tu entrenador es Pedro.'); 
@@ -30,7 +32,6 @@ function retornarProfe () {
 }
 retornarProfe()
 
-
 //altura
 let inputAltura= document.getElementById("altura")
 inputAltura.addEventListener('input', () => { 
@@ -39,6 +40,7 @@ inputAltura.addEventListener('input', () => {
 })
 
 //peso
+// agregar retorno de info en respuestas.js con fecha hasta el dia que completo la info con libreria luxon
 let inputPeso= document.getElementById("peso")
 inputPeso.addEventListener('input', () => { 
     inputPeso.value;
@@ -60,16 +62,25 @@ const alimentacion= [
         nutricionista: 'Lucia',
     },
 ]
+
 //asignar nutricionista
 let inputAlimentacion= document.getElementById("alimentacion")
-inputAlimentacion.onchange = () => {
-    const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.nutricionista === 
-    inputAlimentacion.value,
-    localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
-)}
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
+function retornarNutricionista (){
+    inputAlimentacion.onchange = () => {
+        const mostrarAlimentacion = alimentacion.filter(alimentacion => alimentacion.nutricionista === 
+        inputAlimentacion.value,
+        localStorage.setItem("inputAlimentacion", JSON.stringify(inputAlimentacion)),
+    )}
+}
+retornarNutricionista(alimentacion)
 
 //dietas
-//Plan Nutricionista de dieta Vegan-Federico
+//Plan Nutricionista de dieta Vegan-Federico 
+
+//pasar a json 
 const dietaVegan= [{
     comida: 'desayuno',
     receta: 'chocolatada de leche vegetal, tostadas con palta y tomate, fruta',
@@ -109,12 +120,17 @@ const dietaVegan= [{
 ]
 
 let buttonVegan= document.getElementById("vegan")
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 buttonVegan.click = () => {
     const mostrarDietaVegan = dietaVegan.forEach (dietaVegan => {(`Tu comida para ${dietaVegan.comida} es ${dietaVegan.receta}.`)},   
         localStorage.setItem("buttonVegan", JSON.stringify(buttonVegan)),
 )}
 
 //Plan Nutricionista de dieta Veggie-Andrea
+
+//pasar a json 
 const dietaVeggie= [{
     comida: 'desayuno',
     receta: 'cafe con bebida vegetal, tostada de pan integral, huevos revueltos, tomate troceado',
@@ -158,6 +174,9 @@ const dietaVeggie= [{
     postre: 'fruta de estación',
 },
 ]
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 let buttonVeggie= document.getElementById("veggie")
 buttonVeggie.click = () => {
     const mostrarDietaVeggie = dietaVeggie.forEach (mostrarDietaVeggie => {(`Tu comida para ${dietaVeggie.comida} es ${dietaVeggie.receta}.`)},   
@@ -165,6 +184,8 @@ buttonVeggie.click = () => {
 )}
 
 //Plan Nutricionista de dieta Completa-Lucia
+
+//pasar a json
 const dietaCompleta= [
 {
     comida: 'desayuno',
@@ -211,6 +232,9 @@ const dietaCompleta= [
 ]
 
 let buttonCompleta= document.getElementById("completa")
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 buttonCompleta.click = () => {
     const mostrarDietaCompleta = dietaCompleta.forEach (dietaCompleta => {(`Tu comida para ${dietaCompleta.comida} es ${dietaCompleta.receta}.`)},   
         localStorage.setItem("buttonCompleta", JSON.stringify(buttonCompleta)),
@@ -218,6 +242,8 @@ buttonCompleta.click = () => {
 
 //Plan de entrenamineto-Pedro/Viviana/Ayelen
 //Rutina de enfasis a un grupo muscular
+
+//pasar a json
 const rutinaEnfasis=[
 {
     dia:'lunes',
@@ -318,12 +344,17 @@ const rutinaEnfasis=[
 ]
 
 let buttonEnfasis= document.getElementById("enfasis")
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 buttonEnfasis.click = () => {
     const mostrarRutinaEnfasis = rutinaEnfasis.forEach (rutinaEnfasis => {(`El día ${rutinaEnfasis.dia} realiza ${rutinaEnfasis.ejercicio} de ${rutinaEnfasis.series} y ${rutinaEnfasis.repetiones}.`)},   
         localStorage.setItem("buttonEnfasis", JSON.stringify(buttonEnfasis)),
 )}
 
 //Rutina Clasica
+
+//pasar a json
 const rutinaClasica= [
 {
     dia:'lunes-miercoles',
@@ -409,6 +440,9 @@ const rutinaClasica= [
 ]
 
 let buttonClasica= document.getElementById("clasica")
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 buttonClasica.click = () => {
     const mostrarRutinaClasica = rutinaClasica.forEach (rutinaClasica => {(`El día ${rutinaClasica.dia} realiza ${rutinaClasica.ejercicio} de ${rutinaClasica.series} series y ${rutinaClasica.repetiones} repeticiones.`)},   
         localStorage.setItem("buttonClasica", JSON.stringify(buttonClasica)),
@@ -416,6 +450,8 @@ buttonClasica.click = () => {
 
 //Rutina avanzada
 //Todos los días_Cuerpo completo
+
+//pasar a json
 const rutinaAvanzada=[
 {
     dia:'todos-los-dias',
@@ -491,6 +527,9 @@ const rutinaAvanzada=[
 ]
 
 let buttonAvanzada= document.getElementById("avanzada")
+
+//esta funcion tendria que estar en respuestas.js? 
+// y crear elemento que retorne la info al usuario
 buttonAvanzada.click = () => {
     const mostrarRutinaAvanzada = rutinaAvanzada.forEach (rutinaAvanzada => {(`El día ${rutinaAvanzada.dia} realiza ${rutinaAvanzada.ejercicio} de ${rutinaAvanzada.series} series y ${rutinaAvanzada.repetiones} repeticiones.`)},   
         localStorage.setItem("buttonAvanzada", JSON.stringify(buttonAvanzada)),
@@ -502,6 +541,10 @@ inputEmail.addEventListener('input', () => {
     inputEmail.value;
     localStorage.setItem("inputEmail", JSON.stringify(inputEmail))
 })
+
+//en este paso al momento que se presiona el boton de enviar agregar libreria sweet alert
+//que confirme que se guardaron sus datos
+//y adjuntar link de respuestas.html con la info de las dietas,rutinas y demas 
 
 //button-enviar
 let buttonGuardar = document.getElementById("guardar")
