@@ -6,31 +6,19 @@ let text= document.getElementById("text")
 //FORMULARIO
 //nombre
 let inputNombre= document.getElementById("nombre")
-inputNombre.addEventListener('input', () => { 
-    inputNombre.value;
-    localStorage.setItem("inputNombre", JSON.stringify(inputNombre))
-})
+
+function retornarNombre () {
+    inputNombre.addEventListener('input', () => { 
+        inputNombre.value;
+        localStorage.setItem("inputNombre", JSON.stringify(inputNombre))
+    })
+}
+retornarNombre ()
 
 //edad
-//esta funcion tendria que estar en respuestas.js? 
-// y crear elemento que retorne la info al usuario
 
 let inputEdad= document.getElementById("edad")
-function retornarProfe () {
-    inputEdad.addEventListener ('input', () => { 
-        let edad= inputEdad;
-        if (edad <= 20) { ('Tu entrenador es Pedro.'); 
-        }
-        else if(edad <= 30) { ('Tu entrenadora es Viviana.');
-        }
-        else if (edad <= 35) { ('Tu entrenador es Ayelen.')
-        }
-        inputEdad.value;
-        }  
-    )
-    localStorage.setItem("inputEdad",JSON.stringify(inputEdad))
-}
-retornarProfe()
+
 
 //altura
 let inputAltura= document.getElementById("altura")
@@ -47,23 +35,9 @@ inputPeso.addEventListener('input', () => {
     localStorage.setItem("inputPeso", JSON.stringify(inputPeso))
 })
 
-//alimentacion
-const alimentacion= [
-    {
-        tipo: 'Vegan',
-        nutricionista: 'Federico',
-    },
-    {
-        tipo: 'Veggie',
-        nutricionista: 'Andrea',
-    },
-    {
-        tipo: 'Completa',
-        nutricionista: 'Lucia',
-    },
-]
 
-//asignar nutricionista
+
+//asignar nutricionista 
 let inputAlimentacion= document.getElementById("alimentacion")
 
 //esta funcion tendria que estar en respuestas.js? 
