@@ -47,7 +47,7 @@ fetch("./db/dieta-vegan.json")
         cardVegan.innerHTML = `<h2>Dieta a seguir: </h2>
                             <h3>Comida: ${dietaVegan.comida}</h3>
                             <h3>Receta: ${dietaVegan.receta}</h3>`
-        container.appendChild(cardVegan)
+        comidas.appendChild(cardVegan)
         })
     })
 
@@ -63,7 +63,7 @@ fetch("./db/dieta-veggie.json")
         cardVeggie.innerHTML = `<h2>Dieta a seguir: </h2>
                         <h3>Comida: ${dietaVeggie.comida}</h3>
                         <h3>Receta: ${dietaVeggie.receta}</h3>`
-        container.appendChild(cardVeggie)
+        comidas.appendChild(cardVeggie)
         })
     })
 
@@ -79,7 +79,7 @@ fetch("./db/dieta-completa.json")
         cardCompleta.innerHTML = `<h2>Dieta a seguir: </h2>
                         <h3>Comida: ${dietaCompleta.comida}</h3>
                         <h3>Receta: ${dietaCompleta.receta}</h3>`
-        container.appendChild(cardCompleta)
+        comidas.appendChild(cardCompleta)
         })
     })
 
@@ -89,23 +89,13 @@ let entrenador= document.getElementById("retorno-entrenador")
 let edadStorage = localStorage.getItem("inputEdad")
 edadStorageStorage = JSON.parse(edadStorage)
 
-function retornarProfe () {
-    inputEdad.addEventListener ('input', () => { 
-        let edad= inputEdad;
-        if (edad <= 20) { ('Tu entrenador es Pedro.'); 
-        }
-        else if(edad <= 30) { ('Tu entrenadora es Viviana.');
-        }
-        else if (edad <= 35) { ('Tu entrenador es Ayelen.')
-        }
-        inputEdad.value;
-        const nombre = document.createElement("div")
-        nombre.innerHTML = `<h3>Tu entrenador asignado es <span>${retornarProfe}</h3>`
-        } 
-    )
-    localStorage.setItem("inputEdad",JSON.stringify(inputEdad))
+function retornarEntrenador (retornarProfe) {
+    retornarProfe.addEventListener (retornarProfe=> {
+        const profe = document.createElement("div")
+        profe.innerHTML = `<h3>Tu entrenador asignado es <span>${retornarProfe}</h3>`
+    })
 }
-retornarProfe()
+retornarBienvenida(edadStorage)
 
 //rutina
 let rutinas= document.getElementById("lista-rutinas")
@@ -124,7 +114,7 @@ fetch("./db/rutina-enfasis.json")
                         <h3>Ejercicio: ${rutinaEnfasis.ejercicio}</h3>
                         <h3>Hacer <span>${rutinaEnfasis.series}</span> de <span>${rutinaEnfasis.repeticiones}</span>.</h3>
                         </li></div>`
-        container.appendChild(cardRutiEnfasis)
+        rutinas.appendChild(cardRutiEnfasis)
         })
     })
 
@@ -142,9 +132,25 @@ fetch("./db/rutina-clasica.json")
                         <h3>Ejercicio: ${rutinaClasica.ejercicio}</h3>
                         <h3>Hacer <span>${rutinaClasica.series}</span> de <span>${rutinaClasica.repeticiones}</span>.</h3>
                         </li></div>`
-        container.appendChild(cardRutiClasica)
+        rutinas.appendChild(cardRutiClasica)
         })
     })
 
 //rutina-avanzada
+let rutinaAvanzadaStorage = localStorage.getItem("avanzada")
+rutinaAvanzadaStorage = JSON.parse(rutinaAvanzadaStorage)
+
+fetch("./db/rutina-avanzada.json")
+.then(response => response.json())
+.then(data => {
+        data.forEach(rutinaAvanzada => {
+        const cardRutiAvanzada = document.createElement("div")
+        cardRutiAvanzada.innerHTML = `<h2>Tu rutina a seguir: </h2>
+                        <div><li><h3>Día: ${rutinaAvanzada.dia}</h3>
+                        <h3>Ejercicio: ${rutinaAvanzada.ejercicio}</h3>
+                        <h3>Hacer <span>${rutinaAvanzada.series}</span> de <span>${rutinaAvanzada.repeticiones}</span>.</h3>
+                        </li></div>`
+        rutinas.appendChild(cardRutiAvanzada)
+        })
+    })
 

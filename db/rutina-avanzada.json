@@ -1,0 +1,73 @@
+[
+    {
+        "dia":"todos-los-dias",
+        "ejercicio":"remo al menton",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"press de banca",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"premo mancuerna a una mano",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"elevaciones laterales",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"press inclinado",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"extenciones de tríceps polea alta",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"curl con barra",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"curl con mancuerna sentado",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"sentadillas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"pullover",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"sentadilla profunda",
+        "series": 1,
+        "repeticiones": 20
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"pullovers profundo",
+        "series": 1,
+        "repeticiones": 20
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"peso muerto",
+        "series": 2,
+        "repeticiones": 18
+    },{
+        "dia":"todos-los-dias",
+        "ejercicio":"extensiones de tríceps en polea alta",
+        "series": 2,
+        "repeticiones": 18
+    }
+    ]

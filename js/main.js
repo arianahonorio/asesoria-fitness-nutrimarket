@@ -21,6 +21,21 @@ retornarNombre ()
 
 let inputEdad= document.getElementById("edad")
 
+function retornarProfe () {
+    inputEdad.addEventListener ('input', () => { 
+        let edad= inputEdad;
+        if (edad <= 20) { ('Tu entrenador es Pedro.'); 
+        }
+        else if(edad <= 30) { ('Tu entrenadora es Viviana.');
+        }
+        else if (edad <= 35) { ('Tu entrenador es Ayelen.')
+        inputEdad.value;
+        } 
+    })
+    localStorage.setItem("inputEdad",JSON.stringify(inputEdad))
+}
+retornarProfe()
+
 //altura
 
 let inputAltura= document.getElementById("altura")
@@ -94,85 +109,8 @@ buttonClasica.onclick = () => {
 
 //Rutina avanzada
 //Todos los días_Cuerpo completo
-
-const rutinaAvanzada=[
-{
-    dia:'todos-los-dias',
-    ejercicio:'remo al menton',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'press de banca',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'premo mancuerna a una mano',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'elevaciones laterales',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'press inclinado',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'extenciones de tríceps polea alta',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'curl con barra',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'curl con mancuerna sentado',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'sentadillas',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'pullover',
-    series: '3',
-    repeticiones: '12',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'sentadilla profunda',
-    series: '1',
-    repeticiones: '20',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'pullovers profundo',
-    series: '1',
-    repeticiones: '20',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'peso muerto',
-    series: '2',
-    repeticiones: '18',
-},{
-    dia:'todos-los-dias',
-    ejercicio:'extensiones de tríceps en polea alta',
-    series: '2',
-    repeticiones: '18',
-},
-]
-
 let buttonAvanzada= document.getElementById("avanzada")
 
-//esta funcion tendria que estar en respuestas.js? 
-// y crear elemento que retorne la info al usuario
 buttonAvanzada.onclick = () => {
     const mostrarRutinaAvanzada = rutinaAvanzada.forEach (rutinaAvanzada => {(`El día ${rutinaAvanzada.dia} realiza ${rutinaAvanzada.ejercicio} de ${rutinaAvanzada.series} series y ${rutinaAvanzada.repetiones} repeticiones.`)},   
         localStorage.setItem("buttonAvanzada", JSON.stringify(buttonAvanzada)),
