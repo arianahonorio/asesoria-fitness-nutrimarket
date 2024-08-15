@@ -1,0 +1,83 @@
+[
+    {
+        "dia":"lunes-miercoles",
+        "ejercicio":"sentadillas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"remo con barra con barra/mancuernas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"press militar con barra/mancuernas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"press de banca",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"curl de biceps",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"fondos paralelas",
+        "series": 5,
+        "repeticiones": 10
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"elevaciones de talones con barra",
+        "series": 3,
+        "repeticiones": 20
+    },{
+        "dia":"lunes-miercoles",
+        "ejercicio":"abdominales oblicuos y cortos",
+        "series": 8,
+        "repeticiones": 20
+    },{
+        "dia":"viernes",
+        "ejercicio":"sentadillas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"viernes",
+        "ejercicio":"peso muerto",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"viernes",
+        "ejercicio":"press militar con barra/mancuernas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"viernes",
+        "ejercicio":"press de banca con barra/mancuernas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"viernes",
+        "ejercicio":"curl de biceps con barra/mancuernas",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "dia":"viernes",
+        "ejercicio":"fondos paralelas",
+        "series": 5,
+        "repeticiones": 20
+    },{
+        "dia":"viernes",
+        "ejercicio":"elevaciones de talones con barra",
+        "series": 3,
+        "repeticiones": 20
+    },{
+        "dia":"viernes",
+        "ejercicio":"abdominales oblicuos y cortos",
+        "series": 8,
+        "repeticiones": 20
+    }
+]

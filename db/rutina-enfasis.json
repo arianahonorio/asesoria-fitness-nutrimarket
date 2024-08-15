@@ -1,0 +1,116 @@
+[
+    {
+        "dia":"lunes",
+        "ejercicio":"press banca",
+        "series":4,
+        "repeticiones":6
+    },
+    {
+        "dia":"lunes",
+        "ejercicio":"aperturas inclinadas",
+        "series": 4,
+        "repeticiones": "10, 8, 8, 6"
+    },
+    {
+        "dia":"lunes",
+        "ejercicio":"sentadilla profunda",
+        "series": 3,
+        "repeticiones": "10, 8, 6"
+    },
+    {
+        "dia":"lunes",
+        "ejercicio":"dominadas lastradas",
+        "series": 4,
+        "repeticiones": "10, 8, 8, 6"
+    },
+    {
+        "dia":"lunes",
+        "ejercicio":"press militar barra",
+        "series": 3,
+        "repeticiones": "10, 8, 8"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"sentadillas en cajón",
+        "series": 4,
+        "repeticiones":"10, 10, 8, 8"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"prensa 45°",
+        "series": 4,
+        "repeticiones": "8, 8, 6, 6"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"press banca inclinado con mancuernas",
+        "series": 3,
+        "repeticiones": "8, 6, 6"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"remo gironda",
+        "series": 4,
+        "repeticiones": "10, 8, 8, 6"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"elevaciones frontales",
+        "series": 3,
+        "repeticiones": "10, 10, 8"
+    },
+    {
+        "dia":"miercoles",
+        "ejercicio":"elevaciones de talones de pie",
+        "series": 5,
+        "repeticiones": 20
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"dominadas neutras lastradas",
+        "series": 4,
+        "repeticiones": 6
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"remo en punta",
+        "series": 4,
+        "repeticiones": "10, 8, 8, 6"
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"extensiones de cuadriceps",
+        "series": 4,
+        "repeticiones": "10, 10, 8, 6"
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"curl femoral",
+        "series": 4,
+        "repeticiones": "10, 10, 8, 8"
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"flexiones en suelo",
+        "series": 4,
+        "repeticiones": "hasta el fallo"
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"fondos paralelas",
+        "series": 4,
+        "repeticiones": "hasta el fallo"
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"encogimientos dobles",
+        "series": 4,
+        "repeticiones": 20
+    },
+    {
+        "dia":"viernes",
+        "ejercicio":"elevacion de piernas",
+        "series": 4,
+        "repeticiones": 20
+    }
+]

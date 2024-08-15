@@ -1,0 +1,37 @@
+[{
+    "comida": "desayuno",
+    "receta": "cafe con bebida vegetal, tostada de pan integral, huevos revueltos, tomate troceado"
+},
+{
+    "comida":"desayuno",
+    "receta":"batido de banana con leche vegetal, tortitas de avena, nueces y chocolate"
+},
+{
+    "comida": "desayuno",
+    "receta": "yogur deslactosado con avena y frutos secos, fruta"
+},
+{
+    "comida":"almuerzo",
+    "receta":"mini tartas de calabacín y risotto con champiñones"
+},
+{
+    "comida":"almuerzo",
+    "receta":"ensalada de tomates cherry, pimiento rojo y verde, cebolla y quinoa"
+},
+{
+    "comida":"almuerzo",
+    "receta":"tallarines integrales, dados de tofu, con salteado de brócoli, zanahoria, berenjena, cebolla y semillas de sésamo"
+},
+{
+    "comida":"cena",
+    "receta":"ensalada verde, tortilla de patatas"
+},
+{
+    "comida":"cena",
+    "receta": "ensalada de tomate, cebolla, pepino, aguacate, maíz y mozzarella, caldo de verduras con fideos"
+},
+{
+    "comida":"Cena",
+    "receta":"pizza de coliflor"
+}
+]
