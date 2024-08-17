@@ -123,21 +123,45 @@ inputEmail.addEventListener('input', () => {
     localStorage.setItem("inputEmail", JSON.stringify(inputEmail))
 })
 
-//en este paso al momento que se presiona el boton de enviar agregar libreria sweet alert
-//que confirme que se guardaron sus datos
-//y adjuntar link de respuestas.html con la info de las dietas,rutinas y demas 
-
 //button-enviar
 let buttonGuardar = document.getElementById("guardar")
 buttonGuardar.onclick = () => {click++}
 localStorage.getItem(JSON.stringify(buttonGuardar))
 
+
+.then((result) => {
+    /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+            Swal.fire({icon: "success",
+            title: "¡Se registraron tus datos con exito!",
+            imageUrl: "https://placeholder.pics/svg/300x500",
+            imageHeight: 500,
+            imageAlt: "A tall image",
+            footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+        });
+        } else if (result.isDenied) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Se encontró, revisa los datos ingresados!",
+            });
+        }
+    })
+
 //formulario
-let miformulario = document.getElementById("formulario");
-miformulario.addEventListener("Submit", validarFormulario);
+let miFormulario = document.getElementById("formulario");
+miFormulario.addEventListener("Submit", validarFormulario);
     function validarFormulario (e) {
         e.preventDefault();
-        localStorage.getItem("formulario", JSON.stringify(miformulario))
+        localStorage.getItem("formulario", JSON.stringify(miFormulario))
+    try {
+        (miFormulario)  
+        }
+    catch(err) {
+            analisis = err
+        } finally {
+        analisis
+        }
     }
 
 
