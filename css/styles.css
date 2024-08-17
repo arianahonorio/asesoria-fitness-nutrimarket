@@ -16,6 +16,7 @@ main{
     font-optical-sizing: auto;
     font-style: normal;
     background-color: #efdc97;
+    display: flex;
 }
 
 /*header*/
@@ -75,6 +76,7 @@ h1{
     padding: 2px 2px 2px 2px;
 }
 .banner-index img{
+    display: flex;
     width: 100%;
     background-color: #efdc97;
 }
@@ -92,6 +94,7 @@ h1{
     font-size: 20px;
     border: 2px solid #6a964c ;
     border-radius: 20px 20px;
+    padding-bottom: 5px;
 }
 .button1:hover{
     border: 2px solid #efdc97;
