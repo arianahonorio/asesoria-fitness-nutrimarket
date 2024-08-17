@@ -17,6 +17,7 @@ main{
     font-style: normal;
     background-color: #efdc97;
     display: flex;
+    flex-wrap: wrap;
 }
 
 /*header*/
