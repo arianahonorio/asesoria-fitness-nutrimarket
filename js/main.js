@@ -33,13 +33,6 @@ function retornarPeso(inputPeso){
 retornarPeso()
 
 //OBJETIVOS
-const objetivos=[
-    {
-    lograr:"Bajar de peso",
-    },{
-    lograr:"Aumentar masa muscular",
-},]
-    
 const cartObjetivos = []
     
 let objetivoContainer = document.getElementById("objetivo")

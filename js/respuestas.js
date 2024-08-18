@@ -36,14 +36,16 @@ objetivoStorage = JSON.parse(objetivoStorage)
 
 let mostarObjetivo = document.getElementById("retorno-objetivo")
 
-function renderDelObjetivo (cartItems) {
-    cartItems.forEach (objetivo => {
-        const cardObjetivo = document.createElement("div")
-        cardObjetivo.innerHTML = `<p>Tu objetivo a lograr es <span>${objetivo.lograr}</span></p>`
-        cartContainer.appendChild(cardObjetivo)
+fetch("./db/objetivos.json")
+.then(response => response.json())
+.then(data => {
+    data.forEach(objetivo => {
+    const cardObjetivo = document.createElement("div")
+        cardObjetivo.innerHTML = `<p>Tu objetivo a lograr es 
+                            <span>${objetivo.lograr}</span></p>`
+        mostarObjetivo.appendChild(cardObjetivo)
     })
-}
-renderObjetivo(objetivoStorage)
+})
 
 //RETORNO-DIETA
 
