@@ -3,27 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!---JS-->
-    <script defer src="./js/main.js"></script>
+    <script defer src="./main.js"></script>
     <!--LIBRERIA-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!---CSS-->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./styles.css">
     <!--FUENTE-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
     <!---BOOTSTRAP-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous">
     <title>Aseroría Fitness By Nutrimarket</title>
 </head>
 <body>
     <header class="container-nav">
         <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid padding-0"> 
+            <div class="container-fluid padding-0">
                 <a class="navbar-brand" href="./index.html">
-                <img class="logo" src="./img/logo-fitness.png" alt="logo-fitness-by-nutri">
+                <img class="logo" src="./logo-fitness.png" alt="logo-fitness-by-nutri">
                 </a>
             </div>
             <section class="collapse navbar-collapse menu" id="navbarSupportedContent">
@@ -39,7 +39,7 @@
     </header>
     <main class="main-index">
             <h1 id="bienvenida">Asesoría Fitness By Nutrimarket</h1>
-            <img src="./img/banner-fitness.png" alt="banner-fitness" class="banner-fitness">
+            <img src="./banner-fitness.png" alt="banner-fitness" class="banner-fitness">
         <div class="texto-bienvenida">
             <p id="text">
                 Hola, Bienvenid@! ¿List@ para comenzar con tu asesoría?
@@ -48,23 +48,24 @@
             </p>
         </div>
         <section class="container-form">
-            <form id="form" class="row g-3 needs-validation" >
+            <form id="form" class="row g-3" novalidate>
                 <div class="col-md-4">
-                    <label for="validationCustom01" class="form-label">¿Cómo te llamas?</label>
-                    <input type="text" class="form-control" id="validationCustom01 nombre" required="">
+                    <label for="validationCustom01" class="form-label" id="nombre">¿Cómo te llamas?</label>
+                    <input type="text" class="form-control" id="nombre" required="">
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom01" class="form-label">¿Cuánto pesas?</label>
-                    <input type="text" class="form-control" id="validationCustom01 peso" required="">
+                    <label for="validationCustom01" class="form-label" id="peso">¿Cuánto pesas?</label>
+                    <input type="text" class="form-control" id="peso" required="">
                 </div>
-                <div id="objetivo" class="col-md-4">
-                    <h3>¿Cuál es tu objetivo?</h3>
+                <div id="objetivo" class="col-md-4">  
+                    <label for="validationCustom01" class="form-label" id="objetivo">¿Cuál es tu objetivo?</label>
+                </div>
                 </div>
                 <div id="dieta" class="col-md-6">
-                    <h3>Pedí tu plan de dieta según tu tipo de alimetación!</h3>
+                    <label for="validationCustom01" class="form-label" id="dieta">Pedí tu plan de dieta según tu tipo de alimentación!</label>
                 </div>
                 <div id="rutina" class="col-md-6">
-                    <h3>Pedí tu rutina de ejercicios según tus necesidades!</h3>
+                    <label for="validationCustom01" class="form-label" id="rutina">Pedí tu rutina de ejercicios según tus necesidades!</label>
                 </div>
                 <div class="col-12">
                     <button class="button1" type="submit" id="guardar">Enviar</button>
@@ -86,8 +87,8 @@
         <div class="container-newsletter">
             <h3>Newsletter</h3>
             <div class="newsletter-form">
-                <form> 
-                    <label for="email">Ingrese su mail para recibir recetas saludables 
+                <form>
+                    <label for="email">Ingrese su mail para recibir recetas saludables
                         <br> y ofertas de nuestros productos.
                     </label>
                     <input class="email-footer" type="email" placeholder="Escriba su mail" id="email">

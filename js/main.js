@@ -6,24 +6,31 @@ let text= document.getElementById("text")
 
 //FORMULARIO
 let formulario= document.getElementById("form");
-formulario.addEventListener('submit', validarFormulario);
+formulario.addEventListener('submit', validarFormulario)
 function validarFormulario (e) {
     e.preventDefault ();
-    localStorage.getItem("formulario", JSON.stringify(formulario))}
-    
+    localStorage.getItem("formulario", JSON.stringify(formulario))
+    }
+
 //NOMBRE
 let inputNombre= document.getElementById("nombre")
-inputNombre.addEventListener('onchange', () => {
+function retornarNombre(inputNombre){
+    inputNombre.addEventListener('onchange', () => {
     inputNombre.value;
     localStorage.setItem("inputNombre", JSON.stringify(inputNombre))
-});
+    })
+}
+retornarNombre ()
 
 //PESO
 let inputPeso= document.getElementById("peso")
-inputPeso.addEventListener('onchange', () => {
+function retornarPeso(inputPeso){
+    inputPeso.addEventListener('onchange', () => {
     inputPeso.value;
     localStorage.setItem("inputPeso", JSON.stringify(inputPeso))
-});
+    })
+}
+retornarPeso()
 
 //OBJETIVOS
 const objetivos=[
@@ -118,10 +125,10 @@ renderDieta(dietas)
 
 function addToCartButtonDieta (){
     addButtonDieta= document.querySelectorAll(".elegirDieta")
-    addToCartButtonDieta.forEach(button => {
+    addButtonDieta.forEach(button => {
         button.onclick= (e) => {
             const elegirDieta= e.currentTarget.alimentacion
-            const selectedDieta= objetivos.find (dieta => dieta.alimentacion == elegirDieta )
+            const selectedDieta= dietas.find (dieta => dieta.alimentacion == elegirDieta )
             cartDieta.push(selectedDieta)
             console.log(cartDieta)
             localStorage.setItem("cartDieta",JSON.stringify(cartDieta))
@@ -129,9 +136,10 @@ function addToCartButtonDieta (){
     })
 }
 
+//RUTINAS
 const rutinas= [
     {
-        tipo:'con enfasis',
+        tipo:'Con Énfasis',
         entrenador:'Andres',
         lunes:'1-press banca/ 2-aperturas inclinadas/ 3-sentadilla profunda/ 4-press militar barra/ 5-dominadas lastradas',
         miercoles:'1-sentadillas/ 2-prensa 45°/ 3-press banca inclinado con mancuernas/ 4-remo/ 5-elevaciones frontales',
@@ -139,7 +147,7 @@ const rutinas= [
         series: 4,
         repeticiones: 12,
     },{
-        tipo:'clasica',
+        tipo:'Clásica',
         entrenador:'Viviana',
         lunes:'1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos',
         miercoles:'1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos',
@@ -147,44 +155,45 @@ const rutinas= [
         series: 3,
         repeticiones: 12,
     },{
-        tipo:'avanzada',
+        tipo:'Avanzada',
         entrenador:'Natalia',
         lunes:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
         miercoles:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
         viernes:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
         series: 3,
         repeticiones: '10-hasta el fallo',
-    }
+    },
 ]
 
-//codigo de rutinas en revision
-    let containerRutina= document.getElementById("rutina")
-    
-    const cartRutina=[]
+const cartRutina=[]
 
-    function renderRutina (rutinaArray) {
-        rutinaArray.forEach (rutina => {
-            const card1= document.createElement("div")
-            card1.innerHTML=`<h3>${rutina.tipo}</h3>
-                            <button class="elegirRutina" id="${rutina.tipo}">Elegir</button>`
-            containerRutina.appendChild(card1)
-        })
-        addToCartButton1()
-    }
-    renderRutina(rutinas)
+let rutinaContainer= document.getElementById("rutina")
 
-    function addToCartButton1 () {
-        addButton1= document.querySelectorAll(".elegirRutina")
-        addButton1.forEach(button => {
-            button.onclick = (e) => {
-                const rutinaTipo = e.currentTarget.tipo
-                const selectedRutina = rutinas.find(rutina => rutina.tipo == rutinaTipo)
-                cartRutina.push(selectedRutina)
-                localStorage.setItem("cartRutina", JSON.stringify(cartRutina))
-            }
-        })
-    }
-    
+function renderRutina(rutinaArray){
+    rutinaArray.forEach(rutina=> {
+        const cardRuti=document.createElement("div")
+        cardRuti.innerHTML=`<h7>${rutina.tipo}</h7>
+        <button class="elegirRutina" id="${rutina.tipo}">Seleccionar</button>`
+        rutinaContainer.appendChild(cardRuti)
+    })
+    addToCartButtonRutina()
+}
+renderRutina(rutinas)
+
+function addToCartButtonRutina(){
+    addButtonRuti=document.querySelectorAll(".elegirRutina")
+    addButtonRuti.forEach (button => {
+        button.onclick=(e)=>{
+        const definirRutina= e.currentTarget.tipo
+        const selectedRutina= rutinas.find (rutina=> rutina.tipo==definirRutina)
+        cartRutina.push(selectedRutina)
+        localStorage.setItem("cartRutina",JSON.stringify(cartRutina))
+        }
+        
+    })
+}
+
+//BOTON ENVIAR
     let buttonGuardar = document.getElementById("guardar")
     buttonGuardar.onclick = () => {
         let mensaje= Swal.fire({
