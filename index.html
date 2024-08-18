@@ -48,38 +48,21 @@
             </p>
         </div>
         <section class="container-form">
-            <form id="formulario" class="row g-3 needs-validation" novalidate>
+            <form action="./respuestas.html" id="form" class="row g-3 needs-validation" novalidate method="post" >
                 <div class="col-md-4">
                     <label for="validationCustom01" class="form-label">¿Cómo te llamas?</label>
                     <input type="text" class="form-control" id="validationCustom01 nombre" required="">
                 </div>
                 <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">¿Cuántos años tienes?</label>
-                    <input type="text" class="form-control" id="edad validationCustom02" required="">
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">¿Cuánto medis?</label>
-                    <input type="text" class="form-control" id="atura validationCustom02" required="">
-                </div>
-                <div class="col-md-4">
-                    <label for="validationCustom02" class="form-label">¿Cuánto pesas?</label>
-                    <input type="text" class="form-control" id="peso validationCustom02" required="">
+                    <label for="validationCustom02" class="form-label">¿Cuál es tu género?</label>
+                    <input type="number" class="form-control" id="edad validationCustom02" required="">
                 </div>
                 <div class="col-md-6">
-                <label for="validationCustom02" class="form-label">¿Cuál es tu alimetación? (Vegan, Veggie, Completa)</label>
-                <input type="text" class="form-control" id="alimentacion validationCustom02" required="">
+                <div id="dieta" class="col-md-6">
+                    <label for="validationCustom02" class="form-label">Pedí tu plan de dieta según tu tipo de alimetación!</label>
                 </div>
-                <div class="col-md-6">
-                    <label for="validationCustom02" class="form-label">Pedí tu plan de dieta!</label>
-                    <button id="vegan" type="submit">Vegan</button>
-                    <button id="veggie" type="submit">Veggie</button>
-                    <button id="completa" type="submit">Completa</button>
-                </div>
-                <div class="col-md-6">
+                <div id="rutina" class="col-md-6">
                     <label for="validationCustom02" class="form-label">Pedí tu rutina de ejercicios según tus necesidades!</label>
-                    <button id="enfasis" type="submit">Con Enfasis</button>
-                    <button id="clasica" type="submit">Cláica</button>
-                    <button id="avanzada" type="submit">Avanzada</button>
                 </div>
                 <div class="col-12">
                     <button class="button1" type="submit" id="guardar">Enviar</button>

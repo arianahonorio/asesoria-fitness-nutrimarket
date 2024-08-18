@@ -79,7 +79,7 @@ h1{
 }
 .texto-bienvenida{
     width: 80%;
-    text-align:left;
+    text-align:center;
     padding-left: 30px;
     padding-top: 20px;
 }
@@ -89,15 +89,16 @@ h1{
     padding-left:30px;
     display: flex;
 }
-
+.col-12{
+    padding-bottom: 5px;
+}
 .button1{
     background-color: #6a964c;
     color: white;
-    padding: 2px 2px 2px 2px;
+    padding: 5px 5px 5px 5px;
     font-size: 20px;
     border: 2px solid #6a964c ;
     border-radius: 20px 20px;
-    padding-bottom: 5px;
 }
 .button1:hover{
     border: 2px solid #efdc97;
