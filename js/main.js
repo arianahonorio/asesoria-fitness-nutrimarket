@@ -9,7 +9,7 @@ let formulario= document.getElementById("form");
 formulario.addEventListener('submit', validarFormulario);
 function validarFormulario (e) {
     e.preventDefault ();
-    localStorage.getItem("formulario", JSON.stringify(formulario))
+    localStorage.getItem("formulario", JSON.stringify(formulario))}
     
 
     let inputNombre= document.getElementById("nombre")
@@ -133,7 +133,7 @@ function validarFormulario (e) {
             }
         }
             localStorage.getItem(JSON.stringify(buttonGuardar))
-    }
+
 
 const dietas= [
     {
