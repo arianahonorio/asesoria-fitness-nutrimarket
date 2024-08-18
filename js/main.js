@@ -9,6 +9,8 @@ let formulario= document.getElementById("form");
 formulario.addEventListener('submit', validarFormulario);
 function validarFormulario (e) {
     e.preventDefault ();
+    localStorage.getItem("formulario", JSON.stringify(formulario))
+    
 
     let inputNombre= document.getElementById("nombre")
     inputNombre.addEventListener('input', () => {
@@ -16,24 +18,39 @@ function validarFormulario (e) {
         localStorage.setItem("inputNombre", JSON.stringify(inputNombre))
     });
 
-    let inputEdad= document.getElementById("edad")
-    function retornarProfe () {
-        inputEdad.addEventListener ('input', () => {
-        let edad= inputEdad;
-        if (edad <= 20) { 'Tu entrenador es Pedro.';
-        }
-        else if(edad <= 30) { 'Tu entrenadora es Viviana.';
-        }
-        else if (edad <= 35) { 'Tu entrenador es Ayelen.';
-        }
-        inputEdad.value;
-        localStorage.setItem("inputEdad",JSON.stringify(inputEdad))
+    let inputPeso= document.getElementById("peso")
+    inputPeso.addEventListener('input', () => {
+        inputPeso.value;
+        localStorage.setItem("inputPeso", JSON.stringify(inputPeso))
+    });
+
+    let containerObjetivo= document.getElementsById("objetivo")
+    const cartObjetivo = []
+
+    function renderObjetivo (objetivoArray) {
+        objetivoArray.forEach (objetivo => {
+            const cardObj= document.createElement("div")
+            cardObj.innerHTML= `<h3>${objetivo.lograr}</h3>
+                            <button class="elegirObj" id="${objetivo.lograr}>Seleccionar</button>`
+            containerObjetivo.appendChild(cardObj)
+        })
+        addToCartButtonObj()
+    }
+    renderObjetivo(objetivos)
+
+    function addToCartButtonObj () {
+        addButtonObj=document.querySelectorAll(".elegirObj")
+        addButtonObj.forEach (button => {
+            button.onclick= (e) => {
+                const definirObjetivo= e.currentTarget.lograr
+                const selectedObj= objetivos.find (objetivo => objetivo.lograr == definirObjetivo)
+                cartObjetivo.push(selectedObj)
+                localStorage.setItem("cartObjetivo", JSON.stringify(cartObjetivo))
+            }
         })
     }
-    retornarProfe()
-
-    let containerDieta= document.getElementsById("dieta")
     
+    let containerDieta= document.getElementsById("dieta")
     const cartAlimentacion = []
     
     function renderDieta(dietaArray) {
@@ -45,7 +62,7 @@ function validarFormulario (e) {
         })
         addToCartButton()
     }
-    renderDieta(productos)
+    renderDieta(dietas)
 
     function addToCartButton () {
         addButton = document.querySelectorAll(".elegirdieta")
@@ -85,9 +102,38 @@ function validarFormulario (e) {
             }
         })
     }
-
     
-}
+    let buttonGuardar = document.getElementById("guardar")
+    buttonGuardar.onclick = () => {
+        let mensaje= Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Se encontró, revisa los datos ingresados!",
+        })
+        try {
+            if (formulario)  {
+                Swal.fire({icon: "success",
+                    title: "¡Se registraron tus datos con exito!",
+                    imageUrl: "https://placeholder.pics/svg/300x500",
+                    imageHeight: 500,
+                    imageAlt: "A tall image",
+                    footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                    })
+                }
+            } catch(err) {
+                mensaje ==err
+            } finally {
+                Swal.fire({icon: "success",
+                    title: "¡Se registraron tus datos con exito!",
+                    imageUrl: "https://placeholder.pics/svg/300x500",
+                    imageHeight: 500,
+                    imageAlt: "A tall image",
+                    footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                    })
+            }
+        }
+            localStorage.getItem(JSON.stringify(buttonGuardar))
+    }
 
 const dietas= [
     {
@@ -132,6 +178,7 @@ const dietas= [
 const rutinas= [
     {
         tipo:'con enfasis',
+        entrenador:'Andres',
         lunes:'1-press banca/ 2-aperturas inclinadas/ 3-sentadilla profunda/ 4-press militar barra/ 5-dominadas lastradas',
         miercoles:'1-sentadillas/ 2-prensa 45°/ 3-press banca inclinado con mancuernas/ 4-remo/ 5-elevaciones frontales',
         viernes:'1-remo/ 2-extensiones de cuadriceps/ 3-curl femoral/ 4-flexiones en suelo/ 5-elevacion de piernas',
@@ -139,6 +186,7 @@ const rutinas= [
         repeticiones: 12,
     },{
         tipo:'clasica',
+        entrenador:'Viviana',
         lunes:'1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos',
         miercoles:'1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos',
         viernes:'1-sentadillas/ 2-peso muerto/ 3-press militar con barra/ 4-press banca/ 5- curl de biceps/ 6- abs oblicuos y cortos',
@@ -146,6 +194,7 @@ const rutinas= [
         repeticiones: 12,
     },{
         tipo:'avanzada',
+        entrenador:'Natalia',
         lunes:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
         miercoles:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
         viernes:'1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto',
@@ -153,3 +202,9 @@ const rutinas= [
         repeticiones: '10-hasta el fallo',
     }
 ]
+
+const objetivos=[{
+    lograr:"Bajar de peso",
+},{
+    lograr:"Aumentar masa muscular",
+}]
