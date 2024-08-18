@@ -14,35 +14,28 @@ function validarFormulario (e) {
 
 //NOMBRE
 let inputNombre= document.getElementById("nombre")
-function retornarNombre(inputNombre){
-    inputNombre.addEventListener('onchange', () => {
+inputNombre.addEventListener('onchange', () => {
     inputNombre.value;
     localStorage.setItem("inputNombre", JSON.stringify(inputNombre))
-    })
-}
-retornarNombre ()
+});
 
 //PESO
 let inputPeso= document.getElementById("peso")
-function retornarPeso(inputPeso){
-    inputPeso.addEventListener('onchange', () => {
+inputPeso.addEventListener('onchange', () => {
     inputPeso.value;
     localStorage.setItem("inputPeso", JSON.stringify(inputPeso))
-    })
-}
-retornarPeso()
+});
 
 //OBJETIVOS
-
 const objetivos=[
     {
     lograr:"Bajar de peso",
     },{
     lograr:"Aumentar masa muscular",
 },]
-
+    
 const cartObjetivos = []
-
+    
 let objetivoContainer = document.getElementById("objetivo")
     
 function renderObjetivo(objetivoArray){
@@ -69,7 +62,6 @@ function addToCartButtonObj () {
 }
 
 //DIETAS
-
 const dietas= [
     {
     alimentacion:'Vegan',
@@ -138,8 +130,6 @@ function addToCartButtonDieta (){
     })
 }
 
-//RUTINAS
-
 const rutinas= [
     {
         tipo:'Con Énfasis',
@@ -187,7 +177,7 @@ function addToCartButtonRutina(){
     addButtonRuti=document.querySelectorAll(".elegirRutina")
     addButtonRuti.forEach (button => {
         button.onclick=(e)=>{
-        const definirRutina= e.currentTarget.rutina
+        const definirRutina= e.currentTarget.tipo
         const selectedRutina= rutinas.find (rutina=> rutina.tipo==definirRutina)
         cartRutina.push(selectedRutina)
         localStorage.setItem("cartRutina",JSON.stringify(cartRutina))
@@ -196,8 +186,7 @@ function addToCartButtonRutina(){
     })
 }
 
-//BOTON ENVIAR
-    let buttonGuardar = document.getElementById("guardar")
+let buttonGuardar = document.getElementById("guardar")
     buttonGuardar.onclick = () => {
         let mensaje= Swal.fire({
             icon: "error",
@@ -225,5 +214,5 @@ function addToCartButtonRutina(){
                     footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
                     })
             }
-        }
             localStorage.getItem(JSON.stringify(buttonGuardar))
+        }
