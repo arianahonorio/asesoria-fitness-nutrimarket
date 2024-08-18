@@ -1,0 +1,27 @@
+[
+    {
+        "tipo":"Con Énfasis",
+        "entrenador":"Andres",
+        "lunes":"1-press banca/ 2-aperturas inclinadas/ 3-sentadilla profunda/ 4-press militar barra/ 5-dominadas lastradas",
+        "miercoles":"1-sentadillas/ 2-prensa 45°/ 3-press banca inclinado con mancuernas/ 4-remo/ 5-elevaciones frontales",
+        "viernes":"1-remo/ 2-extensiones de cuadriceps/ 3-curl femoral/ 4-flexiones en suelo/ 5-elevacion de piernas",
+        "series": 4,
+        "repeticiones": 12
+    },{
+        "tipo":"Clásica",
+        "entrenador":"Viviana",
+        "lunes":"1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos",
+        "miercoles":"1-sentadilla/ 2-remo con barra/ 3-press militar con barra/ 4- press banca/ 5- curl biceps/ 6-abs oblicuos",
+        "viernes":"1-sentadillas/ 2-peso muerto/ 3-press militar con barra/ 4-press banca/ 5- curl de biceps/ 6- abs oblicuos y cortos",
+        "series": 3,
+        "repeticiones": 12
+    },{
+        "tipo":"Avanzada",
+        "entrenador":"Natalia",
+        "lunes":"1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto",
+        "miercoles":"1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto",
+        "viernes":"1-remo al menton/ 2-press banca/ 3-remo a una mano/ 4-elevaciones laterales/ 5- ext de triceps/ 6-sentadilla profunca/ 7- peso muerto",
+        "series": 3,
+        "repeticiones": "10-hasta el fallo"
+    }
+]
