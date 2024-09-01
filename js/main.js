@@ -53,7 +53,7 @@ function addToCartButtonObj () {
     addButtonObj=document.querySelectorAll(".elegirObj")
     addButtonObj.forEach (button => {
         button.onclick= (e) => {
-            const definirObjetivo= e.currentTarget.lograr
+            const definirObjetivo= e.currentTarget.id
             const selectedObj= objetivos.find (objetivo => objetivo.lograr == definirObjetivo)
             cartObjetivos.push(selectedObj)
             localStorage.setItem("cartObjetivo", JSON.stringify(cartObjetivos))
@@ -121,7 +121,7 @@ function addToCartButtonDieta (){
     addButtonDieta= document.querySelectorAll(".elegirDieta")
     addButtonDieta.forEach(button => {
         button.onclick= (e) => {
-            const elegirDieta= e.currentTarget.alimentacion
+            const elegirDieta= e.currentTarget.id
             const selectedDieta= dietas.find (dieta => dieta.alimentacion == elegirDieta )
             cartDieta.push(selectedDieta)
             console.log(cartDieta)
@@ -177,7 +177,7 @@ function addToCartButtonRutina(){
     addButtonRuti=document.querySelectorAll(".elegirRutina")
     addButtonRuti.forEach (button => {
         button.onclick=(e)=>{
-        const definirRutina= e.currentTarget.tipo
+        const definirRutina= e.currentTarget.id
         const selectedRutina= rutinas.find (rutina=> rutina.tipo==definirRutina)
         cartRutina.push(selectedRutina)
         localStorage.setItem("cartRutina",JSON.stringify(cartRutina))
