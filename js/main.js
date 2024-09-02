@@ -10,6 +10,34 @@ formulario.addEventListener('submit', validarFormulario)
 function validarFormulario (e) {
     e.preventDefault ();
     localStorage.getItem("formulario", JSON.stringify(formulario))
+    let mensaje= Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "No se detectaron datos ingresados!",
+    })
+    try {
+        if (formulario)  {
+            Swal.fire({icon: "success",
+                title: "¡Se registraron tus datos con exito!",
+                imageUrl: "https://placeholder.pics/svg/300x500",
+                imageHeight: 500,
+                imageAlt: "A tall image",
+                footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                })
+            }
+        }
+        catch(err) {
+            mensaje ==err
+        } finally {
+            Swal.fire({icon: "success",
+                title: "¡Se registraron tus datos con exito!",
+                imageUrl: "https://placeholder.pics/svg/300x500",
+                imageHeight: 500,
+                imageAlt: "A tall image",
+                footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                })
+        }
+
     }
 
 //NOMBRE
@@ -66,7 +94,7 @@ const dietas= [
     {
     alimentacion:'Vegan',
     nutricionista:'Federico',
-    desayuno1:'chocolatada de leche vegetal, tostadas con palta y tomate, fruta ',
+    desayuno1:'chocolatada de leche vegetal, tostadas con palta y tomate, fruta',
     desayuno2:'cafe, yogur de soja con avena, fruta',
     desayuno3:'batido de fruta con leche vegetal, pan integral con tomate y semillas',
     almuerzo1:'wrap de ensalada de garbanzos y palta',
@@ -186,33 +214,40 @@ function addToCartButtonRutina(){
     })
 }
 
+//BOTON ENVIAR
 let buttonGuardar = document.getElementById("guardar")
     buttonGuardar.onclick = () => {
-        let mensaje= Swal.fire({
-            icon: "error",
-            title: "Oops...",
-            text: "Se encontró, revisa los datos ingresados!",
-        })
-        try {
-            if (formulario)  {
-                Swal.fire({icon: "success",
-                    title: "¡Se registraron tus datos con exito!",
+        buttonGuardar++
+        localStorage.getItem(JSON.stringify(buttonGuardar))
+        Swal.fire({
+            title: "¿Desea registrar sus datos?",
+                showDenyButton: true,
+                confirmButtonText: "Si!",
+                denyButtonText: `No:(`
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        icon: "success",
+                        title: "¡Se registraron tus datos con exito!",
+                        imageUrl: "https://placeholder.pics/svg/300x500",
+                        imageHeight: 500,
+                        imageAlt: "A tall image",
+                        footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                        })    
+            } else if (result.isDenied) {
+                Swal.fire({
+                    icon: "warming",
+                    title: "Si no deseas registrar tus datos...",
                     imageUrl: "https://placeholder.pics/svg/300x500",
                     imageHeight: 500,
                     imageAlt: "A tall image",
-                    footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
-                    })
-                }
-            } catch(err) {
-                mensaje ==err
-            } finally {
-                Swal.fire({icon: "success",
-                    title: "¡Se registraron tus datos con exito!",
-                    imageUrl: "https://placeholder.pics/svg/300x500",
-                    imageHeight: 500,
-                    imageAlt: "A tall image",
-                    footer: '<a href="./respuestas.html">¡Hacé click acá para ver tu dieta y rutina!</a>'
+                    footer: '<a href="./sugerencias.html">¡Hacé click acá!</a>'
                     })
             }
-            localStorage.getItem(JSON.stringify(buttonGuardar))
-        }
+        })
+    }
+
+
+
+
+

@@ -105,6 +105,17 @@ h1{
     color: #efdc97;
 }
 
+/*main-sugerencias*/
+.guia-vegan div ul li{
+    list-style: none;
+}
+.guia-veggie div ul li{
+    list-style: none;
+}
+.guia-completa div ul li{
+    list-style: none;
+}
+
 /*footer*/
 footer{
     font-family: "Raleway", sans-serif;
